@@ -11,20 +11,10 @@ using System.Windows.Forms;
 namespace vMixBlender
 {
 
-    public class vMixSession
-    {
-        private string name;
-        private string ipcim;
-
-        public vMixSession()
-        {
-
-        }
-    }
-
-
     public partial class Form1 : Form
     {
+
+        public Dictionary<int, vMixSession> sessions = new Dictionary<int, vMixSession>(); 
         public Form1()
         {
             InitializeComponent();
@@ -47,7 +37,12 @@ namespace vMixBlender
 
         private void iPCímAlapjánToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            string nev = "Default Session";
+            string ipcim = "localhost:8088";
+            ShowInputDialog(ref nev, "Name of your session");
+            ShowInputDialog(ref ipcim, "IP address of the vMix session");
+            sessions.Add(sessions.Count + 1, new vMixSession(nev, ipcim));
+            listBox1.Items.Add(nev + " @ " + ipcim);
         }
 
         private static DialogResult ShowInputDialog(ref string input, string name)
@@ -89,5 +84,70 @@ namespace vMixBlender
             return result;
         }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+           //MessageBox.Show(sessions[listBox1.SelectedIndex + 1].getName());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int num = 0;
+            foreach(var item2 in listBox1.SelectedItems)
+            {
+                num = Convert.ToInt32(listBox1.SelectedValue);
+            }
+
+            MessageBox.Show(num.ToString());
+        }
     }
+
+    public class vMixSession
+    {
+        private string name;
+        private string ipcim;
+
+        private int shortcutnumber;
+        private Dictionary<int, String> shortcuts = new Dictionary<int, string>();
+
+        public vMixSession(string name, string ipcim)
+        {
+            this.name = name;
+            this.ipcim = ipcim;
+        }
+
+        public string getName()
+        {
+            return this.name;
+        }
+
+        public string getIpAddress()
+        {
+            return this.ipcim;
+        }
+
+        public Boolean setIPaddress(string ipcim)
+        {
+            if (this.ipcim == ipcim)
+            {
+                return false;
+            }
+
+            this.ipcim = ipcim;
+            return true;
+        }
+
+        public Boolean setName(string name)
+        {
+            if (this.name == name)
+            {
+                return false;
+            }
+
+            this.name = name;
+            return true;
+        }
+
+    }
+
 }
