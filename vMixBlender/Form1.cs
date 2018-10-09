@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -92,14 +93,65 @@ namespace vMixBlender
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int num = 0;
-            foreach(var item2 in listBox1.SelectedItems)
-            {
-                num = Convert.ToInt32(listBox1.SelectedValue);
-            }
-
-            MessageBox.Show(num.ToString());
+            
         }
+
+        private void kilépésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+
+    public class Shortcut
+    {
+        private string name;
+        private Dictionary<vMixSession, String> commands = new Dictionary<vMixSession, string>();
+        
+        public Shortcut(string name, Dictionary<vMixSession, String> commands)
+        {
+            this.name = name;
+            this.commands = commands;
+        }
+
+        public String getName()
+        {
+            return name;
+        }
+
+        public Dictionary<vMixSession, String> getCommands()
+        {
+            return commands;
+        }
+
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+
+        public Boolean addCommand(vMixSession vMixSessionNumber, string command)
+        {
+            commands.Add(vMixSessionNumber, command);
+            return true;
+        }
+
+        public Boolean executeShortcut()
+        {
+            WebClient client = new WebClient();
+            foreach (KeyValuePair<vMixSession, string> entry in commands)
+            {
+                string url = "http://" + entry.Key.getIpAddress() + "" + entry.Value;
+                try
+                {
+                    client.DownloadString(url);
+                } catch (Exception)
+                {
+                    MessageBox.Show("Hiba", "Nem sikerült csatlakozni! " + url);
+                    return false;
+                }
+            }
+            return true;
+        }
+
     }
 
     public class vMixSession

@@ -76,39 +76,40 @@
             this.vMixHozzáadásaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.iPCímAlapjánToolStripMenuItem});
             this.vMixHozzáadásaToolStripMenuItem.Name = "vMixHozzáadásaToolStripMenuItem";
-            this.vMixHozzáadásaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.vMixHozzáadásaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vMixHozzáadásaToolStripMenuItem.Text = "vMix Hozzáadása...";
             // 
             // iPCímAlapjánToolStripMenuItem
             // 
             this.iPCímAlapjánToolStripMenuItem.Name = "iPCímAlapjánToolStripMenuItem";
-            this.iPCímAlapjánToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.iPCímAlapjánToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.iPCímAlapjánToolStripMenuItem.Text = "IP cím alapján";
             this.iPCímAlapjánToolStripMenuItem.Click += new System.EventHandler(this.iPCímAlapjánToolStripMenuItem_Click);
             // 
             // mentésToolStripMenuItem
             // 
             this.mentésToolStripMenuItem.Name = "mentésToolStripMenuItem";
-            this.mentésToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.mentésToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mentésToolStripMenuItem.Text = "Mentés";
             // 
             // betöltésToolStripMenuItem
             // 
             this.betöltésToolStripMenuItem.Name = "betöltésToolStripMenuItem";
-            this.betöltésToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.betöltésToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.betöltésToolStripMenuItem.Text = "Betöltés";
             // 
             // információToolStripMenuItem
             // 
             this.információToolStripMenuItem.Name = "információToolStripMenuItem";
-            this.információToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.információToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.információToolStripMenuItem.Text = "Információ";
             // 
             // kilépésToolStripMenuItem
             // 
             this.kilépésToolStripMenuItem.Name = "kilépésToolStripMenuItem";
-            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kilépésToolStripMenuItem.Text = "Kilépés";
+            this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
             // 
             // beállításokToolStripMenuItem
             // 
@@ -146,11 +147,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 24);
+            this.label1.Location = new System.Drawing.Point(12, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 13);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Select sessions then click add new ";
+            this.label1.Text = "Sessions";
             // 
             // flowLayoutPanel1
             // 
@@ -161,7 +162,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(225, 55);
+            this.button1.Location = new System.Drawing.Point(1082, 80);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 23);
             this.button1.TabIndex = 5;
