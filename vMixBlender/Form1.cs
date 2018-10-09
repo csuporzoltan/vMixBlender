@@ -25,6 +25,7 @@ namespace vMixBlender
         {
 
         }
+        
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
@@ -93,7 +94,7 @@ namespace vMixBlender
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            new ShortcutHandler(listBox1).Show();
         }
 
         private void kilépésToolStripMenuItem_Click(object sender, EventArgs e)

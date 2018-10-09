@@ -82,7 +82,7 @@
             // iPCímAlapjánToolStripMenuItem
             // 
             this.iPCímAlapjánToolStripMenuItem.Name = "iPCímAlapjánToolStripMenuItem";
-            this.iPCímAlapjánToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iPCímAlapjánToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.iPCímAlapjánToolStripMenuItem.Text = "IP cím alapján";
             this.iPCímAlapjánToolStripMenuItem.Click += new System.EventHandler(this.iPCímAlapjánToolStripMenuItem_Click);
             // 
@@ -149,9 +149,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Sessions";
+            this.label1.Text = "Active sessions";
             // 
             // flowLayoutPanel1
             // 
