@@ -68,7 +68,7 @@
             this.kilépésToolStripMenuItem});
             this.fájlToolStripMenuItem.Name = "fájlToolStripMenuItem";
             this.fájlToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fájlToolStripMenuItem.Text = "Fájl";
+            this.fájlToolStripMenuItem.Text = "File";
             this.fájlToolStripMenuItem.Click += new System.EventHandler(this.fájlToolStripMenuItem_Click);
             // 
             // vMixHozzáadásaToolStripMenuItem
@@ -76,46 +76,46 @@
             this.vMixHozzáadásaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.iPCímAlapjánToolStripMenuItem});
             this.vMixHozzáadásaToolStripMenuItem.Name = "vMixHozzáadásaToolStripMenuItem";
-            this.vMixHozzáadásaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.vMixHozzáadásaToolStripMenuItem.Text = "vMix Hozzáadása...";
+            this.vMixHozzáadásaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.vMixHozzáadásaToolStripMenuItem.Text = "Add vMix session by...";
             // 
             // iPCímAlapjánToolStripMenuItem
             // 
             this.iPCímAlapjánToolStripMenuItem.Name = "iPCímAlapjánToolStripMenuItem";
-            this.iPCímAlapjánToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.iPCímAlapjánToolStripMenuItem.Text = "IP cím alapján";
+            this.iPCímAlapjánToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iPCímAlapjánToolStripMenuItem.Text = "IP address";
             this.iPCímAlapjánToolStripMenuItem.Click += new System.EventHandler(this.iPCímAlapjánToolStripMenuItem_Click);
             // 
             // mentésToolStripMenuItem
             // 
             this.mentésToolStripMenuItem.Name = "mentésToolStripMenuItem";
-            this.mentésToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mentésToolStripMenuItem.Text = "Mentés";
+            this.mentésToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.mentésToolStripMenuItem.Text = "Save Preset";
             // 
             // betöltésToolStripMenuItem
             // 
             this.betöltésToolStripMenuItem.Name = "betöltésToolStripMenuItem";
-            this.betöltésToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.betöltésToolStripMenuItem.Text = "Betöltés";
+            this.betöltésToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.betöltésToolStripMenuItem.Text = "Load Preset";
             // 
             // információToolStripMenuItem
             // 
             this.információToolStripMenuItem.Name = "információToolStripMenuItem";
-            this.információToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.információToolStripMenuItem.Text = "Információ";
+            this.információToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.információToolStripMenuItem.Text = "Information";
             // 
             // kilépésToolStripMenuItem
             // 
             this.kilépésToolStripMenuItem.Name = "kilépésToolStripMenuItem";
-            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kilépésToolStripMenuItem.Text = "Kilépés";
+            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.kilépésToolStripMenuItem.Text = "Quit";
             this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
             // 
             // beállításokToolStripMenuItem
             // 
             this.beállításokToolStripMenuItem.Name = "beállításokToolStripMenuItem";
-            this.beállításokToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.beállításokToolStripMenuItem.Text = "Beállítások";
+            this.beállításokToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.beállításokToolStripMenuItem.Text = "Settings";
             // 
             // statusStrip1
             // 
@@ -184,7 +184,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "vMixBlender 0.4";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

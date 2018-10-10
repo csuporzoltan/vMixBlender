@@ -94,7 +94,14 @@ namespace vMixBlender
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new ShortcutHandler(listBox1).Show();
+            if(listBox1.Items.Count == 0)
+            {
+                MessageBox.Show("You don't have any active sessions. Try add one at File -> Add vMix Sessions first.", "Error");
+                return;
+            }
+
+
+            new ShortcutHandler(sessions).Show();
         }
 
         private void kilépésToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,6 +179,12 @@ namespace vMixBlender
         public string getName()
         {
             return this.name;
+        }
+
+        public vMixSession getSessionByName(string name)
+        {
+            if (this.name == name) return this;
+            else return null;
         }
 
         public string getIpAddress()

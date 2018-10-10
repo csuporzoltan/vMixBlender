@@ -1,18 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace vMixBlender
 {
     public partial class ShortcutHandler : Form
     {
-        private ListBox listbox;
-        public ShortcutHandler(ListBox listbox)
+        public Dictionary<int, vMixSession> sessions = new Dictionary<int, vMixSession>();
+        public ShortcutHandler(Dictionary<int, vMixSession> sessions)
         {
             InitializeComponent();
-            this.listbox = listbox;
-            for(int i = 0; i < listbox.Items.Count; i++)
+            this.sessions = sessions;
+            foreach (KeyValuePair<int, vMixSession> entry in sessions)
             {
-                checkedListBox1.Items.Add(listbox.Items[i].ToString());
+                checkedListBox1.Items.Add(entry.Value.getName());
             }
         }
 
@@ -28,7 +29,10 @@ namespace vMixBlender
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            foreach (object itemChecked in checkedListBox1.CheckedItems)
+            {
+              
+            }
         }
 
 
@@ -69,6 +73,11 @@ namespace vMixBlender
             DialogResult result = inputBox.ShowDialog();
             input = textBox.Text;
             return result;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
