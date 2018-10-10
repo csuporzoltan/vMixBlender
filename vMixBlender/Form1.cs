@@ -108,7 +108,9 @@ namespace vMixBlender
         {
             this.Close();
         }
+
     }
+
 
     public class Shortcut
     {
