@@ -101,7 +101,15 @@ namespace vMixBlender
             }
 
 
-            new ShortcutHandler(sessions).Show();
+            using (ShortcutHandler addShortCutHandler = new ShortcutHandler(sessions))
+            {
+                if (addShortCutHandler.ShowDialog() == DialogResult.OK)
+                {
+                    MessageBox.Show(addShortCutHandler.TheValue);
+                }
+            }
+
+
         }
 
         private void kilépésToolStripMenuItem_Click(object sender, EventArgs e)

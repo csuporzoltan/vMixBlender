@@ -6,6 +6,8 @@ namespace vMixBlender
 {
     public partial class ShortcutHandler : Form
     {
+        public Button executeButton = new Button();
+        private Boolean isAddedDone = false;
         public Dictionary<int, vMixSession> sessions = new Dictionary<int, vMixSession>();
         public ShortcutHandler(Dictionary<int, vMixSession> sessions)
         {
@@ -21,6 +23,12 @@ namespace vMixBlender
         {
 
         }
+
+        public string TheValue
+        {
+            get { return "ok"; }
+        }
+
 
         private void ShortcutHandler_Load(object sender, EventArgs e)
         {
@@ -48,6 +56,8 @@ namespace vMixBlender
                 vMixSession build = giveClassByName(itemChecked.ToString());
                 shortcutbuilder.Add(build, "test");
             }
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,7 +75,6 @@ namespace vMixBlender
                     textBox.Text = "Command for: " + itemChecked.ToString();
                     textBox.Name = "textBox" + i.ToString();
                     this.Controls.Add(textBox);
-                    Button executeButton = new Button();
                     executeButton.Text = "Save Shortcut!";
                     executeButton.Size = new System.Drawing.Size(103, 23);
                     executeButton.Location = new System.Drawing.Point(250, 100);
@@ -73,6 +82,8 @@ namespace vMixBlender
                     this.Controls.Add(executeButton);
                     i++;
             }
+            //isAddedDone = true;
+            //this.Close();
         }
 
 
@@ -119,5 +130,12 @@ namespace vMixBlender
         {
             this.Close();
         }
+
+
+        public Boolean isShortcutAddedDone()
+        {
+            return isAddedDone;
+        }
     }
+
 }
