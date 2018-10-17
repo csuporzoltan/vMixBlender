@@ -24,9 +24,23 @@ namespace vMixBlender
 
         }
 
-        public string TheValue
+        public Dictionary<vMixSession, string> TheValue
         {
-            get { return "ok"; }
+            get {
+
+                int z = 1;
+                Dictionary<vMixSession, string> shortcutbuilder = new Dictionary<vMixSession, string>();
+                foreach (object itemChecked in checkedListBox1.CheckedItems)
+                {
+                    vMixSession build = giveClassByName(itemChecked.ToString());
+                    shortcutbuilder.Add(build, this.Controls["textBox" + z].Text);
+                    z++;
+                }
+
+                return shortcutbuilder;
+
+
+            }
         }
 
 
@@ -50,14 +64,7 @@ namespace vMixBlender
 
         private void executeButton_Click(object sender, EventArgs e)
         {
-            Dictionary<vMixSession, string> shortcutbuilder = new Dictionary<vMixSession, string>();
-            foreach (object itemChecked in checkedListBox1.CheckedItems)
-            {
-                vMixSession build = giveClassByName(itemChecked.ToString());
-                shortcutbuilder.Add(build, "test");
-            }
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
